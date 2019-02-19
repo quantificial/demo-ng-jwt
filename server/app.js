@@ -20,8 +20,8 @@ const logger = winston.createLogger({
       // - Write all logs error (and below) to `error.log`.
       //      
       //new (winston.transports.File)({'timestamp':true}),
-      new winston.transports.File({ filename: 'error.log', level: 'error', 'timestamp': true }),
-      new winston.transports.File({ filename: 'combined.log' })
+      new winston.transports.File({ filename: 'logs/error.log', level: 'error', 'timestamp': true }),
+      new winston.transports.File({ filename: 'logs/combined.log' })
     ]
   });
 

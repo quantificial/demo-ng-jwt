@@ -31,3 +31,6 @@ http://localhost:4000/api/todos
 
 header: Authorization: Bearer {token}
 
+## logger tutorial
+https://www.digitalocean.com/community/tutorials/how-to-use-winston-to-log-node-js-applications
+
