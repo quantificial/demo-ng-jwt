@@ -31,6 +31,30 @@ http://localhost:4000/api/todos
 
 header: Authorization: Bearer {token}
 
+
+## send the header by using the angular-jwt package and set in the app.modules.ts
+
+```
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        whitelistedDomains: ['localhost:4000'],
+        blacklistedRoutes: ['localhost:4000/api/auth']
+      }
+    })
+```
+
+and using proxy in ng client to map /api/ to localhost:4000 server
+proxy.conf.json
+
+
 ## logger tutorial
 https://www.digitalocean.com/community/tutorials/how-to-use-winston-to-log-node-js-applications
+
+
+# how to refresh token?
+
+send one api token and one refresh token which has longer expiry time than api token
+
+when api token expired and need to use refresh token to get a new api token and also the refresh token
 
